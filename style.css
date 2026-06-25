@@ -1,0 +1,220 @@
+:root {
+    --eab-fondo: #f4f4f6;
+    --eab-texto: #111111;
+    --eab-primario: #0a0a0a;
+    --eab-secundario: #6c757d;
+    --eab-blanco: #ffffff;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--eab-fondo);
+    color: var(--eab-texto);
+}
+
+
+.navbar-logo {
+    height: 42px;
+    width: auto;
+    border-radius: 4px;
+}
+
+.marca-texto {
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 1.25rem;
+    color: var(--eab-blanco);
+}
+
+.navbar-nav .nav-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    padding: 0.5rem 1.2rem !important;
+    transition: color 0.3s ease;
+}
+
+
+.input-busqueda .form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--eab-blanco);
+}
+
+.input-busqueda .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1rem;
+}
+
+.input-busqueda .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: none;
+    border-color: rgba(255, 255, 255, 0.4);
+    color: var(--eab-blanco);
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 0 15px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+}
+
+hr {
+    border-color: var(--eab-secundario);
+    opacity: 0.15;
+    margin: 20px 0;
+}
+
+/* Tarjetas de Producto Flexibles */
+.card-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 0 20px;
+    margin-bottom: 50px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 280px;
+    max-width: 320px;
+    background-color: var(--eab-blanco);
+    border: none !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Modificación del botón de compra para que use el color de marca */
+.card .btn-primary {
+    background-color: var(--eab-primario);
+    border-color: var(--eab-primario);
+    padding: 8px 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.card .btn-primary:hover {
+    background-color: #222222;
+    border-color: #222222;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 12px;
+}
+
+
+.pie-pagina {
+    margin-top: auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--eab-primario);
+    color: var(--eab-blanco);
+    padding: 40px 20px 20px 20px;
+}
+
+.footer-principal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    gap: 40px;
+    margin-bottom: 35px;
+}
+
+.footer-marca {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-marca img {
+    max-width: 100px;
+    border-radius: 6px;
+}
+
+.footer-marca h2 {
+    color: var(--eab-blanco);
+    font-size: 1.2rem;
+    padding: 0;
+}
+
+.redes-sociales {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.redes-sociales img {
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) invert(1); /* Pasa los íconos a blanco puro */
+    transition: opacity 0.2s;
+}
+
+.redes-sociales a:hover img {
+    opacity: 0.7;
+}
+
+.footer-contacto ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+    color: #cccccc;
+}
+
+.pie-pagina > p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.8rem;
+    color: #888888;
+}
