@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contacto | EABMODEL</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo_texto">
+        <img src="Imagenes/Logo_EABMODEL.jpeg" alt="Logo EABMODEL">
+
+            <div class="header_info">
+                <h1>EABMODEL</h1>
+                <p><em>Tu estilo, tu identidad.</em></p>
+            </div>
+        </div>
+
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="info.html">Info</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <main class="main">
+    <form class="formulario-contacto" method="post" action="repuesta.html">
+    
+        <fieldset class="datos">
+            <legend>Datos personales</legend>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+        </fieldset>
+
+        <fieldset class="preferencias">
+            <legend>Preferencias</legend>
+
+            <label>Tipo de ropa:</label><br>
+            <input type="radio" id="formal" name="ropa" value="formal">
+            <label for="formal">Formal</label><br>
+
+            <input type="radio" id="casual" name="ropa" value="casual">
+            <label for="casual">Casual</label>
+
+            <label>Intereses:</label><br>
+            <input type="checkbox" id="moda" name="interes" value="moda">
+            <label for="moda">Moda</label><br>
+
+            <input type="checkbox" id="tendencias" name="interes" value="tendencias">
+            <label for="tendencias">Tendencias</label>
+
+            <label for="pais">País:</label>
+            <select id="pais" name="pais">
+                <option>Argentina</option>
+                <option>Chile</option>
+                <option>Uruguay</option>
+            </select>
+
+        </fieldset>
+
+        <fieldset class="mensaje">
+            <legend>Mensaje</legend>
+
+            <label for="mensaje">Comentario:</label><br>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+        </fieldset>
+
+        <div class="form-botones">
+            <input type="submit" class="btn_enviar" value="Enviar">
+            <button class="btn_reset" type="reset">Resetear</button>
+        </div>
+    </form>
+    </main>
+    
+    <footer class="footer">
+        <p>&copy; 2026 EABMODEL | Desarrollado por Celeste y Braian &mdash; Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
