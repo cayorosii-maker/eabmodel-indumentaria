@@ -352,7 +352,7 @@ function limpiarError(campo) {
 }
  
 function validarFormulario(evento) {
-  evento.preventDefault(); // nunca navega a respuesta.html
+  evento.preventDefault();
  
   const nombre = document.getElementById("nombre");
   const email = document.getElementById("email");
@@ -389,8 +389,8 @@ function validarFormulario(evento) {
   }
  
   if (esValido) {
-    alert("¡Pedido enviado con éxito!");
-    evento.target.reset();
+    evento.target.reset(); // RESETEA EL FORMULARIO
+    window.location.href = "respuesta.html"; // REDIRIGE
   }
 }
  
