@@ -289,3 +289,123 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
+//---------- BÚSQUEDA ----------
+ 
+function inicializarBusqueda() {
+ 
+    const input = document.querySelector('input[type="search"]');
+ 
+    if (!input) return;
+ 
+    const formulario = input.closest('form');
+ 
+    input.addEventListener('input', () => {
+ 
+        const texto = input.value.toLowerCase();
+ 
+        document.querySelectorAll('.card').forEach(card => {
+ 
+            const titulo = card
+                .querySelector('.card-title')
+                .textContent
+                .toLowerCase();
+ 
+            card.style.display =
+                titulo.includes(texto) ? '' : 'none';
+ 
+        });
+ 
+    });
+ 
+    if (formulario) {
+ 
+        formulario.addEventListener('submit', (evento) => {
+            evento.preventDefault(); // evita que se recargue la página al presionar Enter o "Buscar"
+        });
+ 
+    }
+ 
+}
+ 
+// ---------- VALIDACIÓN DEL FORMULARIO DE CONTACTO ----------
+ 
+function mostrarError(campo, mensaje) {
+ 
+    limpiarError(campo);
+ 
+    const error = document.createElement('small');
+    error.className = 'mensaje-error';
+    error.style.color = 'red';
+    error.textContent = mensaje;
+ 
+    campo.insertAdjacentElement('afterend', error);
+}
+ 
+function limpiarError(campo) {
+ 
+    const siguiente = campo.nextElementSibling;
+ 
+    if (siguiente && siguiente.classList.contains('mensaje-error')) {
+        siguiente.remove();
+    }
+}
+ 
+function validarFormulario(evento) {
+  evento.preventDefault(); // nunca navega a respuesta.html
+ 
+  const nombre = document.getElementById("nombre");
+  const email = document.getElementById("email");
+  const telefono = document.getElementById("telefono");
+  const pedido = document.getElementById("pedido");
+  let esValido = true;
+ 
+  if (nombre.value.trim().length < 3) {
+    mostrarError(nombre, "Ingresá tu nombre completo.");
+    esValido = false;
+  } else {
+    limpiarError(nombre);
+  }
+ 
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+    mostrarError(email, "Ingresá un correo válido.");
+    esValido = false;
+  } else {
+    limpiarError(email);
+  }
+ 
+  if (telefono.value.trim().length < 6) {
+    mostrarError(telefono, "Ingresá un teléfono válido.");
+    esValido = false;
+  } else {
+    limpiarError(telefono);
+  }
+ 
+  if (pedido.value.trim().length < 10) {
+    mostrarError(pedido, "Contanos un poco más sobre tu pedido.");
+    esValido = false;
+  } else {
+    limpiarError(pedido);
+  }
+ 
+  if (esValido) {
+    alert("¡Pedido enviado con éxito!");
+    evento.target.reset();
+  }
+}
+ 
+function inicializarValidacion() {
+ 
+    const formulario = document.querySelector('form[action="respuesta.html"]');
+ 
+    if (!formulario) return;
+ 
+    formulario.addEventListener('submit', validarFormulario);
+}
+ 
+// ---------- INICIO ----------
+ 
+document.addEventListener("DOMContentLoaded", () => {
+  inicializarBusqueda();
+  inicializarValidacion();
+});
