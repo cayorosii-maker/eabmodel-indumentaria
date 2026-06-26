@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EABMODEL | Carrito</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container my-5 flex-grow-1">
+        <h2 class="mb-4">Tu Carrito de Compras</h2>
+        
+        <div class="table-responsive shadow-sm rounded">
+            <table class="table table-hover align-middle bg-white mb-0">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Producto</th>
+                        <th class="text-center">Cantidad</th>
+                        <th class="text-end">Precio Unitario</th>
+                        <th class="text-end">Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center gap-3">
+                                <img src="Imagenes/productos/Buzos/Sweater GNV Andria.png" alt="Sweater" class="img-carrito">
+                                <div>
+                                    <h6 class="mb-0">Sweater GNV Andria</h6>
+                                    <small class="text-muted">Talle: L</small>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">2</td>
+                        <td class="text-end">$55.000</td>
+                        <td class="text-end fw-bold">$110.000</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr class="table-light">
+                        <td colspan="3" class="text-end fw-bold fs-5">TOTAL:</td>
+                        <td class="text-end fw-bold fs-5 text-primary">$110.000</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <div class="d-flex justify-content-between mt-4">
+            <a href="index.html" class="btn btn-outline-secondary">
+                <i class="bi bi-arrow-left"></i> Seguir Comprando
+            </a>
+            <a href="gracias.html" class="btn btn-success btn-lg px-5">
+                Confirmar Compra <i class="bi bi-check-circle ms-2"></i>
+            </a>
+        </div>
+    </main>
+
+    </body>
+</html>
