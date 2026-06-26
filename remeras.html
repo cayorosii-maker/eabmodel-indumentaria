@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Remeras</title>
+    <title>EABMODEL | Indumentaria Masculina</title>
 </head>
 <body>
     <header class="header sticky-top shadow">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-                    <img src="Imagenes/Logo_EABMODEL.jpeg" alt="Logo EABMODEL" class="navbar-logo">
-                    <span class="marca-texto">EABMODEL</span>
+                    <img src="Imagenes/Logo_EABMODEL.jpeg" alt="Logo EABMODEL" class="logo-nav">
+                    <span class="texto-marca">EABMODEL</span>
                 </a>
                 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,7 +26,7 @@
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-uppercase" href="index.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle text-uppercase" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Productos
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark">
@@ -35,15 +36,21 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="contacto.html">Contactos</a>
+                            <a class="nav-link" href="contacto.html">CONTACTOS</a>
                         </li>
                     </ul>
                     
-                    <form class="d-flex" role="search">
-                        <div class="input-group input-busqueda">
+                    <form class="d-flex align-items-center" role="search">
+                        <div class="input-group busqueda">
                             <input class="form-control" type="search" placeholder="¿Qué estás buscando?" aria-label="Buscar">
                             <button class="btn btn-outline-light" type="submit">Buscar</button>
                         </div>
+    
+                        <a href="carrito.html" class="btn btn-outline-light position-relative ms-3 border-0">
+                            <i class="bi bi-cart3 fs-4"></i>
+                            <span id="icono-contador" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none">
+                            </span>
+                        </a>
                     </form>
                 </div>
             </div>
@@ -52,90 +59,178 @@
 
     <h2>Remeras</h2>
 
-    <div class="card-group">
+    <div class="grupo-cards">
         <div class="card">
             <img src="Imagenes\productos\Remeras\Remera DCB Club Over.png" class="card-img-top" alt="remeras">
             <div class="card-body">
-                <h5 class="card-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Remera DCB Club Over</font></font></h5>
-                <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$25.000</font></font></p>
-                <a href="#" class="btn btn-primary">Comprar</a>
+                <h5 class="card-title">Remera DCB Club Over</h5>
+                <p class="card-text fw-bold fs-5">$35.000</p>
+
+                <div class="d-flex justify-content-center align-items-center mb-3">
+                    <label class="form-label mb-0 fw-semibold me-2">Cant:</label>
+                    <div class="input-group grupo-cant">
+                        <button class="btn btn-outline-secondary btn-menos" type="button">
+                            <i class="bi bi-dash"></i>
+                        </button>
+                        <input type="number" class="form-control text-center cant" value="1" min="1">
+                        <button class="btn btn-outline-secondary btn-mas" type="button">
+                            <i class="bi bi-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <button class="btn btn-primary w-100 btn-agregar">
+                    <i class="bi bi-cart-plus me-1"></i> Añadir
+                </button>
             </div>
-        <div class="card-footer">
-            <small class="text-body-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Última actualización hace 3 minutos</font></font></small>
+            <div class="card-footer">
+                <small class="text-body-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Última actualización hace 3 minutos</font></font></small>
+            </div>
         </div>
-    </div>
         <div class="card">
             <img src="Imagenes\productos\Remeras\Remera DCB House Over.png" class="card-img-top" alt="remeras">
             <div class="card-body">
-                <h5 class="card-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Remera DCB House Over</font></font></h5>
-                <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$28.000</font></font></p>
-                <a href="#" class="btn btn-primary">Comprar</a>
+                <h5 class="card-title">Remera DCB House Over</h5>
+                <p class="card-text fw-bold fs-5">$38.000</p>
+
+                <div class="d-flex justify-content-center align-items-center mb-3">
+                    <label class="form-label mb-0 fw-semibold me-2">Cant:</label>
+                    <div class="input-group grupo-cant">
+                        <button class="btn btn-outline-secondary btn-menos" type="button">
+                            <i class="bi bi-dash"></i>
+                        </button>
+                        <input type="number" class="form-control text-center cant" value="1" min="1">
+                        <button class="btn btn-outline-secondary btn-mas" type="button">
+                            <i class="bi bi-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <button class="btn btn-primary w-100 btn-agregar">
+                    <i class="bi bi-cart-plus me-1"></i> Añadir
+                </button>
             </div>
-        <div class="card-footer">
-            <small class="text-body-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Última actualización hace 3 minutos</font></font></small>
-        </div>
+            <div class="card-footer">
+                <small class="text-body-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Última actualización hace 3 minutos</font></font></small>
+            </div>
         </div>
         <div class="card">
             <img src="Imagenes\productos\Remeras\Remera GNV Novara Over.png" class="card-img-top" alt="remeras">
             <div class="card-body">
-                <h5 class="card-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Remera GNV Novara Over</font></font></h5>
-                <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$25.000</font></font></p>
-                <a href="#" class="btn btn-primary">Comprar</a>
+                <h5 class="card-title">Remera GNV Novara Over</h5>
+                <p class="card-text fw-bold fs-5">$42.000</p>
+
+                <div class="d-flex justify-content-center align-items-center mb-3">
+                    <label class="form-label mb-0 fw-semibold me-2">Cant:</label>
+                    <div class="input-group grupo-cant">
+                        <button class="btn btn-outline-secondary btn-menos" type="button">
+                            <i class="bi bi-dash"></i>
+                        </button>
+                        <input type="number" class="form-control text-center cant" value="1" min="1">
+                        <button class="btn btn-outline-secondary btn-mas" type="button">
+                            <i class="bi bi-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <button class="btn btn-primary w-100 btn-agregar">
+                    <i class="bi bi-cart-plus me-1"></i> Añadir
+                </button>
             </div>
-        <div class="card-footer">
-            <small class="text-body-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Última actualización hace 3 minutos</font></font></small>
-        </div>
+            <div class="card-footer">
+                <small class="text-body-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Última actualización hace 3 minutos</font></font></small>
+            </div>
         </div>
     </div>
 
     <hr>
 
-    <h2>Ofertas</h2>
-
-    <div class="card-group">
+    <div class="grupo-cards">
         <div class="card">
             <img src="Imagenes\productos\Remeras\Remera LSB Bayside Combinada Over.png" class="card-img-top" alt="remeras">
             <div class="card-body">
-                <h5 class="card-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Remera LSB Bayside Combinada Over</font></font></h5>
-                <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$28.000</font></font></p>
-                <a href="#" class="btn btn-primary">Comprar</a>
+                <h5 class="card-title">Remera LSB Bayside Combinada Over</h5>
+                <p class="card-text fw-bold fs-5">$35.000</p>
+
+                <div class="d-flex justify-content-center align-items-center mb-3">
+                    <label class="form-label mb-0 fw-semibold me-2">Cant:</label>
+                    <div class="input-group grupo-cant">
+                        <button class="btn btn-outline-secondary btn-menos" type="button">
+                            <i class="bi bi-dash"></i>
+                        </button>
+                        <input type="number" class="form-control text-center cant" value="1" min="1">
+                        <button class="btn btn-outline-secondary btn-mas" type="button">
+                            <i class="bi bi-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <button class="btn btn-primary w-100 btn-agregar">
+                    <i class="bi bi-cart-plus me-1"></i> Añadir
+                </button>
             </div>
-        <div class="card-footer">
-            <small class="text-body-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Última actualización hace 3 minutos</font></font></small>
-        </div>
+            <div class="card-footer">
+                <small class="text-body-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Última actualización hace 3 minutos</font></font></small>
+            </div>
         </div>
         <div class="card">
             <img src="Imagenes\productos\Remeras\Remera LSB Lisa.png" class="card-img-top" alt="remeras">
             <div class="card-body">
-                <h5 class="card-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Remera LSB Lisa</font></font></h5>
-                <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$25.000</font></font></p>
-                <a href="#" class="btn btn-primary">Comprar</a>
+                <h5 class="card-title">Remera LSB Lisa</h5>
+                <p class="card-text fw-bold fs-5">$30.000</p>
+
+                <div class="d-flex justify-content-center align-items-center mb-3">
+                    <label class="form-label mb-0 fw-semibold me-2">Cant:</label>
+                    <div class="input-group grupo-cant">
+                        <button class="btn btn-outline-secondary btn-menos" type="button">
+                            <i class="bi bi-dash"></i>
+                        </button>
+                        <input type="number" class="form-control text-center cant" value="1" min="1">
+                        <button class="btn btn-outline-secondary btn-mas" type="button">
+                            <i class="bi bi-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <button class="btn btn-primary w-100 btn-agregar">
+                    <i class="bi bi-cart-plus me-1"></i> Añadir
+                </button>
             </div>
-        <div class="card-footer">
-            <small class="text-body-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Última actualización hace 3 minutos</font></font></small>
-        </div>
+            <div class="card-footer">
+                <small class="text-body-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Última actualización hace 3 minutos</font></font></small>
+            </div>
         </div>
         <div class="card">
-            <img src="Imagenes\productos\Remeras\Remera VKM Bat Boxy.png" class="card-img-top" alt="remeras">
+            <img src="Imagenes\productos\Remeras\Remera VKM Eyes Boxy.png" class="card-img-top" alt="remeras">
             <div class="card-body">
-                <h5 class="card-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Remera VKM Bat Boxy</font></font></h5>
-                <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$25.000</font></font></p>
-                <a href="#" class="btn btn-primary">Comprar</a>
+                <h5 class="card-title">Remera VKM Eyes Boxy</h5>
+                <p class="card-text fw-bold fs-5">$40.000</p>
+
+                <div class="d-flex justify-content-center align-items-center mb-3">
+                    <label class="form-label mb-0 fw-semibold me-2">Cant:</label>
+                    <div class="input-group grupo-cant">
+                        <button class="btn btn-outline-secondary btn-menos" type="button">
+                            <i class="bi bi-dash"></i>
+                        </button>
+                        <input type="number" class="form-control text-center cant" value="1" min="1">
+                        <button class="btn btn-outline-secondary btn-mas" type="button">
+                            <i class="bi bi-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <button class="btn btn-primary w-100 btn-agregar">
+                    <i class="bi bi-cart-plus me-1"></i> Añadir
+                </button>
             </div>
-        <div class="card-footer">
-            <small class="text-body-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Última actualización hace 3 minutos</font></font></small>
-        </div>
+            <div class="card-footer">
+                <small class="text-body-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Última actualización hace 3 minutos</font></font></small>
+            </div>
         </div>
     </div>
     
     <hr>
-    <footer class="pie-pagina">
-    <div class="footer-principal">
-        <div class="footer-marca">
+    <footer class="pie">
+    <div class="pie-contenido">
+        <div class="pie-marca">
             <img src="Imagenes/Logo_EABMODEL.jpeg" alt="Logo_EABMODEL">
             <h2>EABMODEL Indumentaria</h2>
             
-            <div class="redes-sociales">
+            <div class="redes">
                 <a href="#">
                     <img src="Imagenes/instagram.png" alt="Instagram">
                 </a>
@@ -148,16 +243,18 @@
             </div>
         </div>
 
-        <div class="footer-contacto">
-            <ul>
-                <li>5493875111111</li>
-                <li>eabmodelindumentaria@hotmail.com</li>
-                <li>EABMODEL - Alvarado 951 - Salta</li>
-            </ul>
+            <div class="pie-contacto">
+                <ul>
+                    <li>+54 9 387 511-1111</li>
+                    <li>eabmodelindumentaria@hotmail.com</li>
+                    <li>EABMODEL - Alvarado 951 - Salta</li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <p>&copy; 2026 EABMODEL | Desarrollado por Amaya, Cayo, Tolaba, Zambrano &mdash; Todos los derechos reservados.</p>
+        <p>&copy; 2026 EABMODEL | Desarrollado por Amaya, Cayo, Tolaba, Zambrano, Celeste y Braian &mdash; Todos los derechos reservados.</p>
     </footer>
 
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
