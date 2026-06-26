@@ -4,58 +4,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EABMODEL | Carrito</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
     <main class="container my-5 flex-grow-1">
-        <h2 class="mb-4">Tu Carrito de Compras</h2>
-        
-        <div class="table-responsive shadow-sm rounded">
+
+        <div class="d-flex align-items-center justify-content-center gap-3 mb-4">
+            <i class="bi bi-cart3 fs-1"></i>
+            <h2 class="m-0">Tu Carrito de Compras</h2>
+        </div>
+
+        <div class="table-responsive shadow rounded" id="tabla-carrito">
+
             <table class="table table-hover align-middle bg-white mb-0">
+
                 <thead class="table-dark">
                     <tr>
                         <th>Producto</th>
                         <th class="text-center">Cantidad</th>
                         <th class="text-end">Precio Unitario</th>
                         <th class="text-end">Subtotal</th>
+                        <th class="text-center">Acciones</th>
                     </tr>
                 </thead>
-                <tbody>
+
+                <tbody id="cuerpo-carrito">
+
                     <tr>
                         <td>
                             <div class="d-flex align-items-center gap-3">
-                                <img src="Imagenes/productos/Buzos/Sweater GNV Andria.png" alt="Sweater" class="img-carrito">
+                                <img
+                                    src="Imagenes/productos/Buzos/Sweater GNV Andria.png"
+                                    alt="Sweater GNV Andria"
+                                    class="img-prod">
+
                                 <div>
-                                    <h6 class="mb-0">Sweater GNV Andria</h6>
-                                    <small class="text-muted">Talle: L</small>
+                                    <h6 class="mb-0">
+                                        Sweater GNV Andria
+                                    </h6>
+
+                                    <small class="text-muted">
+                                        Talle: L
+                                    </small>
                                 </div>
                             </div>
                         </td>
-                        <td class="text-center">2</td>
-                        <td class="text-end">$55.000</td>
-                        <td class="text-end fw-bold">$110.000</td>
+
+                        <td class="text-center">
+                            2
+                        </td>
+
+                        <td class="text-end">
+                            $55.000
+                        </td>
+
+                        <td class="text-end fw-bold">
+                            $110.000
+                        </td>
+
+                        <td class="text-center">
+                            <button class="btn btn-outline-danger btn-sm">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </td>
                     </tr>
+
                 </tbody>
+
                 <tfoot>
                     <tr class="table-light">
-                        <td colspan="3" class="text-end fw-bold fs-5">TOTAL:</td>
-                        <td class="text-end fw-bold fs-5 text-primary">$110.000</td>
+                        <td colspan="3" class="text-end fw-bold fs-5">
+                            TOTAL:
+                        </td>
+
+                        <td
+                            colspan="2"
+                            class="text-end fw-bold fs-5 text-primary"
+                            id="total-carrito">
+
+                            $110.000
+                        </td>
                     </tr>
                 </tfoot>
+
             </table>
         </div>
 
-        <div class="d-flex justify-content-between mt-4">
-            <a href="index.html" class="btn btn-outline-secondary">
-                <i class="bi bi-arrow-left"></i> Seguir Comprando
-            </a>
-            <a href="gracias.html" class="btn btn-success btn-lg px-5">
-                Confirmar Compra <i class="bi bi-check-circle ms-2"></i>
-            </a>
+        <div
+            id="carrito-vacio"
+            class="text-center py-5 d-none">
+
+            <i class="bi bi-cart-x display-1 text-secondary"></i>
+
+            <h4 class="mt-3">
+                Tu carrito está vacío
+            </h4>
+
+            <p class="text-muted">
+                Agrega algunos productos para comenzar tu compra.
+            </p>
         </div>
+
+        <div
+            class="d-flex flex-column flex-md-row justify-content-between gap-3 mt-4">
+
+            <a
+                href="index.html"
+                class="btn btn-outline-secondary">
+
+                <i class="bi bi-arrow-left me-2"></i>
+                Seguir Comprando
+            </a>
+
+            <a
+                href="gracias.html"
+                class="btn btn-success btn-lg">
+
+                Confirmar Compra
+                <i class="bi bi-check-circle ms-2"></i>
+            </a>
+
+        </div>
+
     </main>
 
-    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>
