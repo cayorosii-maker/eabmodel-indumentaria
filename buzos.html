@@ -1,152 +1,163 @@
-
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buzos</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <title>Buzos</title>
 </head>
 <body>
-
-    <header class="bg-dark text-white text-center p-3">
-        <h1>Tienda de Indumentaria</h1>
-
-        <nav>
-            <a href="index.html" class="text-white mx-2">Inicio</a>
-            <a href="pantalones.html" class="text-white mx-2">Pantalones</a>
-            <a href="remeras.html" class="text-white mx-2">Remeras</a>
-            <a href="buzos.html" class="text-white mx-2">Buzos</a>
-            <a href="contacto.html" class="text-white mx-2">Contacto</a>
+    <header class="header sticky-top shadow">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                    <img src="Imagenes/Logo_EABMODEL.jpeg" alt="Logo EABMODEL" class="navbar-logo">
+                    <span class="marca-texto">EABMODEL</span>
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-uppercase" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Productos
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="#">Pantalones</a></li>
+                                <li><a class="dropdown-item" href="#">Remeras</a></li>
+                                <li><a class="dropdown-item" href="#">Buzos</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" href="#">Contactos</a>
+                        </li>
+                    </ul>
+                    
+                    <form class="d-flex" role="search">
+                        <div class="input-group input-busqueda">
+                            <input class="form-control" type="search" placeholder="¿Qué estás buscando?" aria-label="Buscar">
+                            <button class="btn btn-outline-light" type="submit">Buscar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <main class="container my-5">
+    <h2>Buzos</h2>
 
-        <h2 class="text-center mb-4 text-dark">Buzos</h2>
-
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-
-            <div class="col">
-                <div class="card">
-                    <div class="bg-secondary text-white text-center p-5">Imagen</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Buzo canguro</h5>
-                        <p class="card-text">Buzo cómodo con bolsillo.</p>
-                        <p>$24.000</p>
-                        <button class="btn btn-dark">Ver producto</button>
-                    </div>
-                </div>
+    <div class="card-group">
+        <div class="card">
+            <img src="Imagenes\productos\Buzos\Buzo DCB Aesthe Ranglan Over.png" class="card-img-top" alt="buzos">
+            <div class="card-body">
+                <h5 class="card-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Buzo DCB Aesthe Ranglan Over</font></font></h5>
+                <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$29.000</font></font></p>
+                <a href="#" class="btn btn-primary">Comprar</a>
             </div>
-
-            <div class="col">
-                <div class="card">
-                    <div class="bg-secondary text-white text-center p-5">Imagen</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Buzo oversize</h5>
-                        <p class="card-text">Modelo amplio y moderno.</p>
-                        <p>$27.000</p>
-                        <button class="btn btn-dark">Ver producto</button>
-                    </div>
-                </div>
+        <div class="card-footer">
+            <small class="text-body-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Última actualización hace 3 minutos</font></font></small>
+        </div>
+    </div>
+        <div class="card">
+            <img src="Imagenes\productos\Buzos\Buzo DCB Aviador C_Cierre.png" class="card-img-top" alt="buzos">
+            <div class="card-body">
+                <h5 class="card-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Buzo DCB Aviador C_Cierre</font></font></h5>
+                <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$28.000</font></font></p>
+                <a href="#" class="btn btn-primary">Comprar</a>
             </div>
-
-            <div class="col">
-                <div class="card">
-                    <div class="bg-secondary text-white text-center p-5">Imagen</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Buzo frizado</h5>
-                        <p class="card-text">Buzo abrigado para días frescos.</p>
-                        <p>$26.000</p>
-                        <button class="btn btn-dark">Ver producto</button>
-                    </div>
-                </div>
+        <div class="card-footer">
+            <small class="text-body-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Última actualización hace 3 minutos</font></font></small>
+        </div>
+        </div>
+        <div class="card">
+            <img src="Imagenes\productos\Buzos\Buzo DCB Social C-Cierre.png" class="card-img-top" alt="buzos">
+            <div class="card-body">
+                <h5 class="card-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Buzo DCB Social C-Cierre</font></font></h5>
+                <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$25.000</font></font></p>
+                <a href="#" class="btn btn-primary">Comprar</a>
             </div>
+        <div class="card-footer">
+            <small class="text-body-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Última actualización hace 3 minutos</font></font></small>
+        </div>
+        </div>
+    </div>
 
-            <div class="col">
-                <div class="card">
-                    <div class="bg-secondary text-white text-center p-5">Imagen</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Buzo deportivo</h5>
-                        <p class="card-text">Cómodo para entrenar o salir.</p>
-                        <p>$23.000</p>
-                        <button class="btn btn-dark">Ver producto</button>
-                    </div>
-                </div>
+    <hr>
+
+    <h2>Ofertas</h2>
+
+    <div class="card-group">
+        <div class="card">
+            <img src="Imagenes\productos\Buzos\Buzo DCB Washed Con Cierre.png" class="card-img-top" alt="buzos">
+            <div class="card-body">
+                <h5 class="card-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Buzo DCB Washed Con Cierre</font></font></h5>
+                <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$25.000</font></font></p>
+                <a href="#" class="btn btn-primary">Comprar</a>
             </div>
-
-            <div class="col">
-                <div class="card">
-                    <div class="bg-secondary text-white text-center p-5">Imagen</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Buzo con capucha</h5>
-                        <p class="card-text">Modelo clásico con capucha.</p>
-                        <p>$25.000</p>
-                        <button class="btn btn-dark">Ver producto</button>
-                    </div>
-                </div>
+        <div class="card-footer">
+            <small class="text-body-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Última actualización hace 3 minutos</font></font></small>
+        </div>
+        </div>
+        <div class="card">
+            <img src="Imagenes\productos\Buzos\Hoodie DCB Creative Regular.png" class="card-img-top" alt="buzos">
+            <div class="card-body">
+                <h5 class="card-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hoodie DCB Creative Regular</font></font></h5>
+                <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$28.000</font></font></p>
+                <a href="#" class="btn btn-primary">Comprar</a>
             </div>
-
-            <div class="col">
-                <div class="card">
-                    <div class="bg-secondary text-white text-center p-5">Imagen</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Buzo liso</h5>
-                        <p class="card-text">Simple y fácil de combinar.</p>
-                        <p>$22.000</p>
-                        <button class="btn btn-dark">Ver producto</button>
-                    </div>
-                </div>
+        <div class="card-footer">
+            <small class="text-body-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Última actualización hace 3 minutos</font></font></small>
+        </div>
+        </div>
+        <div class="card">
+            <img src="Imagenes\productos\Buzos\Sweater GNV Andria.png" class="card-img-top" alt="buzos">
+            <div class="card-body">
+                <h5 class="card-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sweater GNV Andria</font></font></h5>
+                <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$32.000</font></font></p>
+                <a href="#" class="btn btn-primary">Comprar</a>
             </div>
-
-            <div class="col">
-                <div class="card">
-                    <div class="bg-secondary text-white text-center p-5">Imagen</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Buzo estampado</h5>
-                        <p class="card-text">Buzo con diseño al frente.</p>
-                        <p>$28.000</p>
-                        <button class="btn btn-dark">Ver producto</button>
-                    </div>
-                </div>
+        <div class="card-footer">
+            <small class="text-body-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Última actualización hace 3 minutos</font></font></small>
+        </div>
+        </div>
+    </div>
+    
+    <hr>
+    <footer class="pie-pagina">
+    <div class="footer-principal">
+        <div class="footer-marca">
+            <img src="Imagenes/Logo_EABMODEL.jpeg" alt="Logo_EABMODEL">
+            <h2>EABMODEL Indumentaria</h2>
+            
+            <div class="redes-sociales">
+                <a href="#">
+                    <img src="Imagenes/instagram.png" alt="Instagram">
+                </a>
+                <a href="#">
+                    <img src="Imagenes/facebook.png" alt="Facebook">
+                </a>
+                <a href="#">
+                    <img src="Imagenes/tiktok.png" alt="TikTok">
+                </a>
             </div>
-
-            <div class="col">
-                <div class="card">
-                    <div class="bg-secondary text-white text-center p-5">Imagen</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Buzo urbano</h5>
-                        <p class="card-text">Estilo casual para todos los días.</p>
-                        <p>$27.500</p>
-                        <button class="btn btn-dark">Ver producto</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card">
-                    <div class="bg-secondary text-white text-center p-5">Imagen</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Buzo básico</h5>
-                        <p class="card-text">Prenda cómoda y simple.</p>
-                        <p>$21.000</p>
-                        <button class="btn btn-dark">Ver producto</button>
-                    </div>
-                </div>
-            </div>
-
         </div>
 
-    </main>
-
-    <footer class="bg-dark text-white text-center p-3">
-        <p>Proyecto de Indumentaria</p>
+        <div class="footer-contacto">
+            <ul>
+                <li>5493875111111</li>
+                <li>eabmodelindumentaria@hotmail.com</li>
+                <li>EABMODEL - Alvarado 951 - Salta</li>
+            </ul>
+        </div>
+    </div>
+    <p>&copy; 2026 EABMODEL | Desarrollado por Amaya, Cayo, Tolaba, Zambrano &mdash; Todos los derechos reservados.</p>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
-```
